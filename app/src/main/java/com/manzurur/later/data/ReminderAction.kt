@@ -6,7 +6,7 @@ sealed interface ReminderAction {
 
     class ScheduledAction(val localDateTime: LocalDateTime): ReminderAction
 
-    class GeoFencedAction(val reminderArea: ReminderArea): ReminderAction
+    class GeoFencedAction(val name: String, val reminderArea: ReminderArea): ReminderAction
 
     data object NoReminderAction: ReminderAction
 }
