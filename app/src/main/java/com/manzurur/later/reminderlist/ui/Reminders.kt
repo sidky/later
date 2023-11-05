@@ -19,7 +19,7 @@ import com.manzurur.later.reminderlist.ReminderSection
 import com.manzurur.later.reminderlist.fakes.SectionsFactory
 
 @Composable
-fun Reminders(
+fun ReminderList(
     modifier: Modifier = Modifier,
     sections: List<ReminderSection>,
 ) {
@@ -51,5 +51,5 @@ fun Reminders(
 
 @Composable @Preview
 fun Preview_Reminders() {
-    Reminders(sections = SectionsFactory.sections())
+    ReminderList(sections = SectionsFactory.sections())
 }

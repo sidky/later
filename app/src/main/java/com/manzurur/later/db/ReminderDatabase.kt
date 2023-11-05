@@ -6,7 +6,8 @@ import androidx.room.TypeConverters
 
 @Database(
     entities = [
-        Reminder::class
+        Reminder::class,
+        ReminderAction::class,
     ],
     version = 1
 )
