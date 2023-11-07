@@ -23,6 +23,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+//        buildConfigField("API_KEY_THUMBNAIL_WS", API_KEY_THUMBNAIL_WS)
     }
 
     buildTypes {
@@ -43,6 +45,7 @@ android {
     }
     buildFeatures {
         compose = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.5.3"
@@ -52,6 +55,10 @@ android {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
+}
+
+secrets {
+    propertiesFileName = "secret.properties"
 }
 
 kapt {
@@ -68,6 +75,7 @@ dependencies {
     implementation(libs.ui.graphics)
     implementation(libs.ui.tooling.preview)
     implementation(libs.material3)
+    implementation(libs.material.icons)
 
     implementation(libs.hilt.android)
     kapt(libs.hilt.android.compiler)
@@ -76,10 +84,13 @@ dependencies {
     implementation(libs.mavericks.compose)
     implementation(libs.mavericks.hilt)
 
+    implementation(libs.maps.compose)
+
     implementation(libs.androidx.room.runtime)
     ksp(libs.androidx.room.compiler)
     implementation(libs.androidx.room.ktx)
 
+    implementation(libs.timber)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)

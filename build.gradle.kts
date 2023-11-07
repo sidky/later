@@ -17,4 +17,5 @@ plugins {
     alias(libs.plugins.hilt) apply false
     alias(libs.plugins.ksp) apply false
 }
+
 true // Needed to make the Suppress annotation work for the plugins block
